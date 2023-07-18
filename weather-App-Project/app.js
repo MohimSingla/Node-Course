@@ -9,7 +9,30 @@
 // Note: Error handling NOT IMPLEMENTED.
 
 
+
+
+const yargs = require('yargs')
 const {weatherStackFunc, geoLoc} = require('./api.js')
+
+
+yargs.command({
+    command: "find",
+    handler: (loc) => {
+        geoLoc(loc.location, (error, data)=>{
+            // console.log("c", error, data);
+            weatherStackFunc(data[0], data[1], (error, data)=>{
+                console.log("error: ", error,"and data:",  data);
+            })
+        })
+    },
+    builder: {
+        location: {
+            describe: "location",
+            demandOption: true,
+        }
+    },
+    demandOption: true,
+}).argv
 
 // weatherStackFunc("India", (error, data)=>{
 //     console.log("a", error);
@@ -17,10 +40,5 @@ const {weatherStackFunc, geoLoc} = require('./api.js')
 //     console.log("b", data);
 // });
 
-geoLoc("India", (error, data)=>{
-    // console.log("c", error, data);
-    weatherStackFunc(data[0], data[1], (error, data)=>{
-        console.log("d", error, data);
-    })
-})
+
 
