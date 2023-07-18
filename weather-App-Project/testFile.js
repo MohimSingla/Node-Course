@@ -11,7 +11,7 @@ request({url, json: true}, (error, response, body) => {
     // console.log(response.body.current);
     // console.log(random);
     // console.log(response.request, response.request.data);
-    // console.log("It is currently " + response.body.current.temperature + " degrees. there is " + response.body.current.precip +" % chaces of rain.")
+    console.log("It is currently " + response.body.current.temperature + " degrees. there is " + response.body.current.precip +" % chaces of rain.")
 })
 
 request({url: url2, json: true}, (error, response) => {
