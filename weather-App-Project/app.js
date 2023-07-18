@@ -1,10 +1,8 @@
-const geoFunc = require('./api.js')
+// Accesing data through call back functions 
 
+const weatherStackFunc = require('./api.js')
 
-
-
-
-geoFunc("India", (error, data)=>{
+weatherStackFunc("India", (error, data)=>{
     console.log(error);
     console.log(data);
 });

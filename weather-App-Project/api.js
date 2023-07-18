@@ -1,8 +1,8 @@
+// api call file for app.js
+
 const request = require('postman-request')
 
-
-
-const geoFunc = (location, callback) => {
+const weatherStackFunc = (location, callback) => {
     // do nothing 
 
     const weatherstackAccessToken = "ceda7bfd005844b9da90b335b56278f9";
@@ -17,4 +17,4 @@ const geoFunc = (location, callback) => {
     })
 }
 
-module.exports = geoFunc;
+module.exports = weatherStackFunc;
