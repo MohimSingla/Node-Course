@@ -42,3 +42,26 @@ yargs.command({
 
 
 
+// failed attempt
+// const geoAddress =  (location) => {
+//     var obj={};
+//     console.log("geo Address function called");
+//     geoLoc(location, (error, data)=>{
+//         // console.log("c", error, data);
+//         obj = weatherStackFunc(data[0], data[1], (error, data)=>{
+//             console.log("error: ", error,"and data:",  data);
+//             console.log(obj);
+//             obj = {error, data};
+//         }
+        
+        
+//         )
+//     })
+//     console.log("data retrieved:" , obj)
+//     return obj
+// }
+
+// module.exports = {geoAddress};
+
+
+
