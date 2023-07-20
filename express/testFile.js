@@ -10,7 +10,7 @@ app.set('view engine', 'hbs');
 app.listen(3000, () => { 
     console.log("Server up and running.");
 })
-app.use(express.static(__dirname+"/../")); // specify file name => it will render 
+app.use(express.static(__dirname+"/../views")); // specify file name => it will render 
 hbs.registerPartials(__dirname+"/partials")
 
 app.get('/weather', (req, res)=> {
@@ -23,6 +23,7 @@ app.get('/weather', (req, res)=> {
 
 app.get('/', (req, res)=> {
 
+    
     if(req.query.location)
     {
         geoLoc(req.query.location, (error, data) => { 

@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 
 <html>
-    <head></head>
+    <head>
+    <script src="/../testFile.js"></script>
+    </head>
     <body>
         {{>header}}
+        <form> 
+            <input>
+            <button onclick="console.log('f')">Search</button>
+        </form>
         <p>{{data}}</p>
         <p>{{error}}</p>
         {{>footer}}
