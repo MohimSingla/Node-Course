@@ -1,8 +1,8 @@
 {
-  "name": "task-manager",
+  "name": "testing",
   "version": "1.0.0",
   "description": "",
-  "main": "mongo.js",
+  "main": "testFile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mongodb": "^4.16.0",
-    "mongoose": "^7.4.0"
+    "express": "^4.18.2"
   }
 }
